@@ -1,7 +1,4 @@
 <?php
-
-use Example as GlobalExample;
-
 class Example
 {
     private float $value;
@@ -29,5 +26,8 @@ class Example
     }
 }
 
+$x = $argv[1] ?? null;
+$y = $argv[2] ?? null;
+
 $ex = new Example(8);
-echo $ex?->x(2)?->y(2)?->getValue()."\n\n";
+echo $ex?->x($x)?->y($y)?->getValue()."\n\n";
